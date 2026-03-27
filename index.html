@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Tokofen | Redeem Code Generator & Redeem Game Resmi</title>
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 10% 20%, #0a0f1e, #03060c);
+      color: #eef2ff;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #f97316;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+
+    /* Header */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.5rem 0 1.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo i {
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #f97316, #facc15);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #ffffff, #facc15);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .badge-official {
+      background: rgba(249, 115, 22, 0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1rem;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid rgba(249, 115, 22, 0.5);
+      color: #facc15;
+    }
+    .badge-official i {
+      font-size: 0.8rem;
+      margin-right: 6px;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin: 2rem 0 2rem 0;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: #9ca3af;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    /* Main Grid: Redeem Code & Generator */
+    .redeem-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    /* Redeem Section (Left) */
+    .redeem-section {
+      flex: 1.2;
+      min-width: 300px;
+      background: rgba(8, 18, 28, 0.7);
+      backdrop-filter: blur(14px);
+      border-radius: 2rem;
+      padding: 1.8rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #f97316;
+      padding-left: 15px;
+    }
+
+    .section-title i {
+      color: #f97316;
+      font-size: 1.4rem;
+    }
+
+    .game-selector {
+      margin-bottom: 1.5rem;
+    }
+
+    .game-selector label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #e2e8f0;
+    }
+
+    .game-dropdown {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #0f1824;
+      border: 1px solid #2d3a4b;
+      border-radius: 1rem;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .game-dropdown:focus {
+      outline: none;
+      border-color: #f97316;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #e2e8f0;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #0f1824;
+      border: 1px solid #2d3a4b;
+      border-radius: 1rem;
+      font-size: 1rem;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 2px rgba(249,115,22,0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(95deg, #f97316, #fdba3a);
+      border: none;
+      padding: 1rem 1.8rem;
+      font-weight: 800;
+      font-size: 1rem;
+      border-radius: 2rem;
+      color: #0a0f1e;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.02);
+      background: linear-gradient(95deg, #ff8c42, #ffcd4a);
+      box-shadow: 0 10px 20px rgba(249,115,22,0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(249, 115, 22, 0.2);
+      border: 1px solid #f97316;
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 2rem;
+      color: #facc15;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(249, 115, 22, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Generator Section (Right) */
+    .generator-section {
+      flex: 1.2;
+      min-width: 300px;
+      background: rgba(8, 18, 28, 0.7);
+      backdrop-filter: blur(14px);
+      border-radius: 2rem;
+      padding: 1.8rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
+    }
+
+    .reward-selector {
+      margin-bottom: 1.5rem;
+    }
+
+    .reward-input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .reward-input-group input {
+      flex: 1;
+      padding: 0.9rem 1rem;
+      background: #0f1824;
+      border: 1px solid #2d3a4b;
+      border-radius: 1rem;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .reward-input-group input:focus {
+      outline: none;
+      border-color: #f97316;
+    }
+
+    .reward-list {
+      background: #07121c;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      max-height: 150px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+    }
+
+    .reward-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem;
+      border-bottom: 1px solid #1e2a3a;
+      font-size: 0.85rem;
+    }
+
+    .reward-item span {
+      color: #facc15;
+      font-weight: 600;
+    }
+
+    .remove-reward {
+      background: none;
+      border: none;
+      color: #ff6b6b;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0 5px;
+    }
+
+    .code-display {
+      background: #0f1824;
+      border: 2px dashed #f97316;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .code-display h4 {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .generated-code {
+      font-size: 1.3rem;
+      font-weight: 800;
+      font-family: monospace;
+      letter-spacing: 2px;
+      color: #facc15;
+      word-break: break-all;
+    }
+
+    /* History Section */
+    .history-section {
+      margin-top: 2rem;
+      background: rgba(8, 18, 28, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .history-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .history-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .history-item {
+      background: #0f1824;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.8rem;
+      border-radius: 1rem;
+      border-left: 3px solid #f97316;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .history-code {
+      font-family: monospace;
+      font-weight: 700;
+      color: #facc15;
+      font-size: 0.85rem;
+    }
+
+    .history-details {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .status-redeemed {
+      background: #22c55e20;
+      color: #22c55e;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .status-active {
+      background: #f9731620;
+      color: #f97316;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .toast-notif {
+      visibility: hidden;
+      min-width: 280px;
+      background: #1e2a3a;
+      color: #fff;
+      text-align: center;
+      border-radius: 2rem;
+      padding: 12px 20px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      background: #0f212fd9;
+      border-left: 5px solid #f97316;
+      transition: 0.2s;
+    }
+
+    .toast-notif.show {
+      visibility: visible;
+      animation: fadein 0.3s, fadeout 0.3s 2.5s;
+    }
+
+    @keyframes fadein {
+      from { bottom: 0; opacity: 0; }
+      to { bottom: 30px; opacity: 1; }
+    }
+    @keyframes fadeout {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.85rem;
+      color: #7c8ba0;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 1rem;
+      }
+      .redeem-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <div class="navbar">
+    <div class="logo">
+      <i class="fas fa-ticket-alt"></i>
+      <h1>tokofen</h1>
+      <div class="badge-official"><i class="fas fa-check-circle"></i> REDEEM SYSTEM</div>
+    </div>
+    <div class="trust-badge" style="display: flex; gap: 1rem;">
+      <span><i class="fas fa-shield-alt"></i> 100% Resmi</span>
+      <span><i class="fas fa-gift"></i> Gratis Redeem</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h2><i class="fas fa-qrcode"></i> Redeem Code Generator & Penukaran Resmi</h2>
+    <p>Buat kode redeem untuk game favoritmu atau tukarkan kode yang sudah kamu miliki. Semua kode tersimpan dan valid hanya di Tokofen Official Store.</p>
+  </div>
+
+  <div class="redeem-grid">
+    <!-- Bagian Kiri: REDEEM CODE -->
+    <div class="redeem-section">
+      <div class="section-title">
+        <i class="fas fa-exchange-alt"></i>
+        <span>Tukarkan Kode Redeem</span>
+      </div>
+      
+      <div class="game-selector">
+        <label><i class="fas fa-gamepad"></i> Pilih Game</label>
+        <select id="redeemGameSelect" class="game-dropdown">
+          <option value="Mobile Legends">Mobile Legends</option>
+          <option value="Free Fire">Free Fire</option>
+          <option value="PUBG Mobile">PUBG Mobile</option>
+          <option value="Valorant">Valorant</option>
+          <option value="Genshin Impact">Genshin Impact</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label><i class="fas fa-key"></i> Masukkan Kode Redeem</label>
+        <input type="text" id="redeemCodeInput" placeholder="Contoh: TOKOFEN-MLBB-123ABC" autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label><i class="fas fa-id-card"></i> User ID / Game ID</label>
+        <input type="text" id="redeemUserId" placeholder="Masukkan User ID Anda" autocomplete="off">
+      </div>
+
+      <button id="redeemBtn" class="btn-primary">
+        <i class="fas fa-check-circle"></i> Tukarkan Sekarang
+      </button>
+    </div>
+
+    <!-- Bagian Kanan: GENERATE REDEEM CODE -->
+    <div class="generator-section">
+      <div class="section-title">
+        <i class="fas fa-magic"></i>
+        <span>Buat Kode Redeem Baru</span>
+      </div>
+
+      <div class="game-selector">
+        <label><i class="fas fa-gamepad"></i> Game Tujuan</label>
+        <select id="generateGameSelect" class="game-dropdown">
+          <option value="Mobile Legends">Mobile Legends</option>
+          <option value="Free Fire">Free Fire</option>
+          <option value="PUBG Mobile">PUBG Mobile</option>
+          <option value="Valorant">Valorant</option>
+          <option value="Genshin Impact">Genshin Impact</option>
+        </select>
+      </div>
+
+      <div class="reward-selector">
+        <label><i class="fas fa-gift"></i> Hadiah Redeem (Daftar Reward)</label>
+        <div class="reward-input-group">
+          <input type="text" id="rewardNameInput" placeholder="Nama item (contoh: 100 Diamond)">
+          <button id="addRewardBtn" class="btn-secondary" style="width: auto; padding: 0 1.2rem;"><i class="fas fa-plus"></i></button>
+        </div>
+        <div id="rewardListContainer" class="reward-list">
+          <!-- daftar reward akan ditampilkan di sini -->
+          <div style="text-align: center; color: #6b7280; padding: 1rem;">Belum ada hadiah, tambahkan item reward</div>
+        </div>
+      </div>
+
+      <button id="generateCodeBtn" class="btn-primary">
+        <i class="fas fa-bolt"></i> Generate Redeem Code
+      </button>
+
+      <div id="generatedCodeDisplay" class="code-display" style="display: none;">
+        <h4><i class="fas fa-ticket"></i> Kode Redeem Baru:</h4>
+        <div class="generated-code" id="newGeneratedCode"></div>
+        <button id="copyCodeBtn" class="btn-secondary" style="margin-top: 0.8rem; width: auto; padding: 0.5rem 1rem;"><i class="fas fa-copy"></i> Salin Kode</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- History Redeem Code (Daftar semua kode yang dibuat dan riwayat penukaran) -->
+  <div class="history-section">
+    <div class="history-header">
+      <div class="history-title">
+        <i class="fas fa-history"></i>
+        <span>Riwayat Kode Redeem & Penukaran</span>
+      </div>
+      <button id="clearHistoryBtn" class="btn-secondary" style="width: auto; padding: 0.5rem 1rem;"><i class="fas fa-trash-alt"></i> Hapus Riwayat</button>
+    </div>
+    <div id="historyListContainer" class="history-list">
+      <div style="text-align: center; color: #6b7280; padding: 2rem;">Belum ada kode redeem yang dibuat atau ditukarkan</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tokofen — Official Redeem Code System. Semua kode redeem hanya valid di platform Tokofen. Setiap kode hanya bisa digunakan satu kali.</p>
+  </footer>
+</div>
+
+<div id="toastMsg" class="toast-notif">✨ Pesanan diterima</div>
+
+<script>
+  // Data Storage menggunakan localStorage
+  let redeemCodes = []; // array of { code, game, rewards, used, redeemedBy, redeemedAt, createdAt }
+  let rewardList = []; // temporary reward list saat generate
+
+  // Load data dari localStorage
+  function loadData() {
+    const stored = localStorage.getItem('tokofen_redeem_data');
+    if (stored) {
+      redeemCodes = JSON.parse(stored);
+    } else {
+      // Contoh data dummy untuk demo
+      redeemCodes = [
+        {
+          code: "TOKOFEN-MLBB-GOLD1",
+          game: "Mobile Legends",
+          rewards: ["100 Diamond", "1 Skin Epic"],
+          used: false,
+          redeemedBy: null,
+          redeemedAt: null,
+          createdAt: new Date(Date.now() - 86400000).toISOString()
+        },
+        {
+          code: "TOKOFEN-FF-ELITE",
+          game: "Free Fire",
+          rewards: ["50 Diamond", "Pet Rockie"],
+          used: false,
+          redeemedBy: null,
+          redeemedAt: null,
+          createdAt: new Date(Date.now() - 172800000).toISOString()
+        }
+      ];
+      saveData();
+    }
+    renderHistory();
+  }
+
+  function saveData() {
+    localStorage.setItem('tokofen_redeem_data', JSON.stringify(redeemCodes));
+  }
+
+  // Generate kode random unik
+  function generateUniqueCode(gameName) {
+    const prefix = gameName.substring(0, 2).toUpperCase().replace(/[^A-Z]/g, 'X');
+    const randomPart = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const timestamp = Date.now().toString(36).slice(-4).toUpperCase();
+    let newCode = `TOKOFEN-${prefix}-${randomPart}${timestamp}`;
+    // pastikan tidak duplikat
+    while (redeemCodes.some(item => item.code === newCode)) {
+      newCode = `TOKOFEN-${prefix}-${Math.random().toString(36).substring(2, 8).toUpperCase()}${Date.now().toString(36).slice(-4)}`;
+    }
+    return newCode;
+  }
+
+  // Render history
+  function renderHistory() {
+    const container = document.getElementById('historyListContainer');
+    if (!redeemCodes.length) {
+      container.innerHTML = '<div style="text-align: center; color: #6b7280; padding: 2rem;">Belum ada kode redeem yang dibuat atau ditukarkan</div>';
+      return;
+    }
+
+    container.innerHTML = '';
+    // Urutkan dari terbaru
+    [...redeemCodes].reverse().forEach(item => {
+      const historyDiv = document.createElement('div');
+      historyDiv.className = 'history-item';
+      
+      const rewardsText = item.rewards.join(', ');
+      const createdAt = new Date(item.createdAt).toLocaleString('id-ID');
+      
+      let statusHtml = '';
+      if (item.used) {
+        statusHtml = `<span class="status-redeemed"><i class="fas fa-check"></i> Ditukar oleh ${item.redeemedBy || 'Unknown'} (${new Date(item.redeemedAt).toLocaleString('id-ID')})</span>`;
+      } else {
+        statusHtml = `<span class="status-active"><i class="fas fa-hourglass-half"></i> Aktif / Belum Ditukar</span>`;
+      }
+
+      historyDiv.innerHTML = `
+        <div style="flex: 2; min-width: 180px;">
+          <div class="history-code">${item.code}</div>
+          <div class="history-details">🎮 ${item.game} | 🎁 ${rewardsText}</div>
+          <div class="history-details">📅 Dibuat: ${createdAt}</div>
+        </div>
+        <div style="text-align: right;">
+          ${statusHtml}
+        </div>
+      `;
+      container.appendChild(historyDiv);
+    });
+  }
+
+  // Function untuk redeem code
+  function redeemCode(code, game, userId) {
+    const foundIndex = redeemCodes.findIndex(c => c.code === code && c.game === game && !c.used);
+    if (foundIndex === -1) {
+      return { success: false, message: "Kode tidak valid, sudah digunakan, atau tidak cocok dengan game yang dipilih!" };
+    }
+    if (!userId || userId.trim() === "") {
+      return { success: false, message: "User ID harus diisi!" };
+    }
+    // Redeem
+    redeemCodes[foundIndex].used = true;
+    redeemCodes[foundIndex].redeemedBy = userId;
+    redeemCodes[foundIndex].redeemedAt = new Date().toISOString();
+    saveData();
+    renderHistory();
+    return { success: true, message: `Selamat! Kamu berhasil menukarkan kode dan mendapatkan: ${redeemCodes[foundIndex].rewards.join(', ')}. Reward akan dikirim ke ID: ${userId}` };
+  }
+
+  // Toast notification
+  function showToast(message, isError = false) {
+    const toast = document.getElementById('toastMsg');
+    toast.innerText = message;
+    toast.style.background = isError ? "#b91c1cd9" : "#0f212fd9";
+    toast.style.borderLeftColor = isError ? "#ff4d4d" : "#f97316";
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+
+  // Event Redeem
+  document.getElementById('redeemBtn').addEventListener('click', () => {
+    const code = document.getElementById('redeemCodeInput').value.trim();
+    const game = document.getElementById('redeemGameSelect').value;
+    const userId = document.getElementById('redeemUserId').value.trim();
+
+    if (!code) {
+      showToast("❌ Masukkan kode redeem terlebih dahulu!", true);
+      return;
+    }
+    if (!userId) {
+      showToast("❌ Masukkan User ID / Game ID!", true);
+      return;
+    }
+
+    const result = redeemCode(code, game, userId);
+    if (result.success) {
+      showToast(result.message);
+      document.getElementById('redeemCodeInput').value = '';
+      // tidak menghapus userId agar user gampang lanjut
+    } else {
+      showToast(result.message, true);
+    }
+  });
+
+  // Reward list management (Generator)
+  function updateRewardUI() {
+    const container = document.getElementById('rewardListContainer');
+    if (!rewardList.length) {
+      container.innerHTML = '<div style="text-align: center; color: #6b7280; padding: 1rem;">Belum ada hadiah, tambahkan item reward</div>';
+      return;
+    }
+    container.innerHTML = '';
+    rewardList.forEach((reward, idx) => {
+      const rewardDiv = document.createElement('div');
+      rewardDiv.className = 'reward-item';
+      rewardDiv.innerHTML = `
+        <span><i class="fas fa-gift"></i> ${reward}</span>
+        <button class="remove-reward" data-idx="${idx}"><i class="fas fa-times-circle"></i></button>
+      `;
+      container.appendChild(rewardDiv);
+    });
+    // Event listener hapus reward
+    document.querySelectorAll('.remove-reward').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = parseInt(btn.dataset.idx);
+        rewardList.splice(idx, 1);
+        updateRewardUI();
+      });
+    });
+  }
+
+  document.getElementById('addRewardBtn').addEventListener('click', () => {
+    const rewardInput = document.getElementById('rewardNameInput');
+    const rewardVal = rewardInput.value.trim();
+    if (!rewardVal) {
+      showToast("Masukkan nama hadiah terlebih dahulu!", true);
+      return;
+    }
+    rewardList.push(rewardVal);
+    rewardInput.value = '';
+    updateRewardUI();
+  });
+
+  // Generate Code
+  document.getElementById('generateCodeBtn').addEventListener('click', () => {
+    const selectedGame = document.getElementById('generateGameSelect').value;
+    if (rewardList.length === 0) {
+      showToast("⚠️ Tambahkan minimal satu hadiah untuk membuat kode redeem!", true);
+      return;
+    }
+    const newCode = generateUniqueCode(selectedGame);
+    const newRedeemItem = {
+      code: newCode,
+      game: selectedGame,
+      rewards: [...rewardList],
+      used: false,
+      redeemedBy: null,
+      redeemedAt: null,
+      createdAt: new Date().toISOString()
+    };
+    redeemCodes.push(newRedeemItem);
+    saveData();
+    renderHistory();
+    
+    // Tampilkan kode yang baru digenerate
+    const displayDiv = document.getElementById('generatedCodeDisplay');
+    const codeSpan = document.getElementById('newGeneratedCode');
+    codeSpan.innerText = newCode;
+    displayDiv.style.display = 'block';
+    
+    // reset reward list
+    rewardList = [];
+    updateRewardUI();
+    showToast(`✅ Kode redeem berhasil dibuat: ${newCode}`, false);
+    
+    // Scroll sedikit ke generated code
+    displayDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  // Copy Code
+  document.getElementById('copyCodeBtn')?.addEventListener('click', () => {
+    const codeText = document.getElementById('newGeneratedCode')?.innerText;
+    if (codeText) {
+      navigator.clipboard.writeText(codeText);
+      showToast("📋 Kode berhasil disalin!", false);
+    }
+  });
+
+  // Clear History (opsional, hapus semua data)
+  document.getElementById('clearHistoryBtn').addEventListener('click', () => {
+    if (confirm("⚠️ Yakin ingin menghapus semua riwayat kode redeem? Tindakan ini tidak bisa dibatalkan!")) {
+      redeemCodes = [];
+      rewardList = [];
+      saveData();
+      renderHistory();
+      updateRewardUI();
+      document.getElementById('generatedCodeDisplay').style.display = 'none';
+      showToast("Riwayat berhasil dihapus");
+    }
+  });
+
+  // Inisialisasi
+  loadData();
+  updateRewardUI();
+</script>
+</body>
+</html>
